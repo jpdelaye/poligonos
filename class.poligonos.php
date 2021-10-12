@@ -1,3 +1,4 @@
+<?php
 /**
  * Poligono Class
  * this class output random polygons as SVG  
@@ -93,3 +94,5 @@ class Poligono  {
   }
   
  }
+
+?>
