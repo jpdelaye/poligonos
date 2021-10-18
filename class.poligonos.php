@@ -18,7 +18,7 @@ class Poligono  {
  public function __construct( $paleta, $maxsize, $vertices, $iteration, $scale ) {
     
 	$this->paleta = $paleta;
-    $this->maxsize = $maxsize;
+        $this->maxsize = $maxsize;
 	$this->vertices = $vertices;
 	$this->iteration = $iteration;
 	$this->scale = $scale;
@@ -27,28 +27,29 @@ class Poligono  {
    
  public function get_color() {	  
 	 
-		 $colores["leslie"] = array(
+        $colores["leslie"] = array(
            '#0f2649',
            '#1e2870',
        	   '#541c68',
        	   '#9e266b',
            '#ef5b66',
         );
-	    $colores["polaroid"] = array(
-   	       '#fdb7ba',
+        $colores["polaroid"] = array(
+   	   '#fdb7ba',
            '#f9e2d9',
            '#9ec7bd',
            '#2082a6',
            '#175187',
         );
-	    $colores["rosita"] = array(
+	$colores["rosita"] = array(
            '#ffb0b0',
            '#ffc3c3',
            '#ffd8d8',
            '#ffbfd0',
            '#ffacc2',
         );
-		 return $colores[$this->paleta][rand(0, 4)];
+	 
+	return $colores[$this->paleta][rand(0, 4)];
 	 
   }
 	
@@ -65,7 +66,7 @@ class Poligono  {
 	for ($i = 1; $i <= $this->vertices; $i++) {
         $xy.=rand(0,  $this->maxsize).",".rand(0,  $this->maxsize)." ";
 	}
-	 return $xy;
+	          return $xy;
 	}
 		
  public function get_poligono(){
@@ -73,17 +74,17 @@ class Poligono  {
 	$out="";
 	for ($ima = 1; $ima <= $this->iteration; $ima++) {	
   
-	     $puntos = self::get_vertices();
+	         $puntos = self::get_vertices();
 		 $color = self::get_color();
 		 $rotacion= rand(0, 360);	
 		 $posicionX= rand(0, 1920);
 		 $posicionY= rand(0, 550);		 
 	 
-	     $out.= '<polygon points="'.$puntos.'"  style="fill:'.$color.';"  transform="translate('.$posicionX.','.$posicionY.') scale('.$this->scale.')   " />' ;
+	         $out.= '<polygon points="'.$puntos.'"  style="fill:'.$color.';"  transform="translate('.$posicionX.','.$posicionY.') scale('.$this->scale.')   " />' ;
 		
 	 }	 
 		
-	 return $out;
+	         return $out;
 	      
 	 }
 	 	 
