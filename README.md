@@ -14,5 +14,5 @@ Inputs:
    Color palette, maximum size of the polygon, number of vertices, iteration of polygons, scale
 
 sample:
-here: https://intelector.com/random-polygons/
+here: https://intelector.com/?p=427
 
